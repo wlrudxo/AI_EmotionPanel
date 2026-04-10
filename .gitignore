@@ -1,0 +1,11 @@
+node_modules/
+target/
+*.exe
+core/state.json
+
+# Build outputs
+viewers/vscode/out/
+viewers/tauri/src-tauri/gen/
+
+# Local settings
+.claude/settings.local.json

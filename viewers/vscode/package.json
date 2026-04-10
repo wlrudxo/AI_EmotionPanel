@@ -1,0 +1,43 @@
+{
+  "name": "claude-emotion-panel",
+  "displayName": "Claude Emotion Panel",
+  "description": "Shows Claude's emotion in a VSCode sidebar panel",
+  "version": "1.0.0",
+  "publisher": "kyoungtj",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "claude-emotion",
+          "title": "Claude Emotion",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "claude-emotion": [
+        {
+          "type": "webview",
+          "id": "claude-emotion-panel",
+          "name": "Emotion"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.5.0",
+    "@vscode/vsce": "^3.0.0"
+  }
+}

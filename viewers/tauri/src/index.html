@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="titlebar" data-tauri-drag-region>
+    <button id="btn-size" class="titlebar-btn" title="크기 변경">◇</button>
+    <button id="btn-hide" class="titlebar-btn" title="숨기기">−</button>
+    <button id="btn-close" class="titlebar-btn" title="닫기">×</button>
+  </div>
+  <div class="container" data-tauri-drag-region>
+    <div class="image-container">
+      <img id="img-a" class="emotion-img visible" />
+      <img id="img-b" class="emotion-img hidden" />
+    </div>
+    <div id="bubble" class="speech-bubble">
+      <div id="line" class="line-text"></div>
+      <div id="status" class="status-text"></div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
